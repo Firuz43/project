@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,17 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Base</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <h1>NavBar</h1>
-    <br>
+    <nav>
+        <div class="logo">
+            <h4>Firuz</h4>
+        </div>
+        <ul>
+            <li><a href="">Dashboard</a></li>
+            <li><a href="">Products</a></li>
+        </ul>
+    </nav>
 
     {% block content %}
 
-    
+
     {% endblock %}
 
-    <br>
+    <hr>
     <h5>Footer</h5>
 </body>
 </html>
