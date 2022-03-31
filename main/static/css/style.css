@@ -157,7 +157,48 @@ table {
 
 .product-h {
   font-size: 25px;
-  background-color: yellow;
   height: 60px;
   line-height: 60px;
+}
+
+/* Customer.html styles */
+.customer-main {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.customer {
+  width: 250px;
+  height: 100px;
+  text-align: center;
+  box-shadow: 0 3px 10px gray;
+}
+
+.customer button {
+  display: block;
+  width: 98%;
+  height: 25px;
+  margin: 3px;
+}
+
+.customer-contact {
+  width: 250px;
+  height: 100px;
+  box-shadow: 0 3px 10px gray;
+}
+
+.customer-contact h4 {
+  text-align: center;
+}
+
+.customer-total {
+  width: 250px;
+  height: 100px;
+  box-shadow: 0 3px 10px gray;
+}
+
+.customer-total h4 {
+  text-align: center;
 }
