@@ -161,6 +161,14 @@ table {
   line-height: 60px;
 }
 
+.products-table {
+  border-collapse: collapse;
+}
+
+.products-table td {
+  border: 1px solid black;
+}
+
 /* Customer.html styles */
 .customer-main {
   display: flex;

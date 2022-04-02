@@ -7,12 +7,25 @@
             <h5>Products</h5>
         </div>
         <div class="product-tables">
-            <table>
+            <table class="products-table">
                 <tr>
-                    <th>Product</th>
-                    <th>Category</th>
-                    <th>Price</th>
+                    <td>Product</td>
+                    <td>Category</td>
+                    <td>Price</td>
                 </tr>
+                {% for i in products %}
+                <tr>
+                    <td>
+                        {{ i.name }}
+                     </td>
+                     <td>
+                         {{ i.category }}
+                     </td>
+                     <td>
+                         {{i.price}}
+                     </td>
+                </tr>
+                {% endfor %}
             </table>
         </div>
     </div>
