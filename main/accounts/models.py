@@ -1,4 +1,7 @@
+from random import choice
 from re import T
+from sre_constants import CATEGORY
+from telnetlib import STATUS
 from unicodedata import category
 from django.db import models
 
@@ -6,10 +9,7 @@ from django.db import models
 
 
 class Customer(models.Model):
-    CATEGORY = (
-        ('Indoor', 'Indoor'),
-        ('Out door', 'Out door'),
-    )
+
     name = models.CharField(max_length=100, null=True)
     phone = models.CharField(max_length=100, null=True)
     email = models.CharField(max_length=100, null=True)
@@ -20,13 +20,24 @@ class Customer(models.Model):
 
 
 class Product(models.Model):
+    CATEGORY = (
+        ('Indoor', 'Indoor'),
+        ('Out door', 'Out door'),
+    )
+    name = models.CharField(max_length=200, null=True)
+    price = models.FloatField(null=True)
+    category = models.CharField(max_length=200, null=True, choices=CATEGORY)
+    description = models.CharField(max_length=200, null=True)
+    date_created = models.DateTimeField(auto_now_add=True)
+
+
+class Order(models.Model):
     STATUS = (
         ('Pending', 'Pending'),
         ('Out for delivery', 'Out for delivery'),
         ('Delivered', 'Delivered'),
     )
-    name = models.CharField(max_length=200, null=True)
-    price = models.FloatField(null=True)
-    category = models.CharField(max_length=200, null=True)
-    description = models.CharField(max_length=200, null=True)
+    # customer =
+    # product =
     date_created = models.DateTimeField(auto_now_add=True)
+    status = models.CharField(max_length=200, null=True, choices=STATUS)
