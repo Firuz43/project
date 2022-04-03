@@ -10,10 +10,15 @@
             <a href="" class="btn">Create Customer</a>
             <table class="table">
                 <tr>
-                    <th>Play</th>
-                    <th>Customer</th>
-                    <th>Orders</th>
+                    <td>Customer</td>
+                    <td>Phone</td>
                 </tr>
+                {% for customer in customers %}
+                    <tr>
+                        <td>{{ customer.name }}</td>
+                        <td>{{ customer.phone }}</td>
+                    </tr>
+                {% endfor %}
             </table>
         </div>
     </div>
@@ -24,12 +29,22 @@
             <a href="" class="btn-a">Create Order</a>
             <table class="table-a">
                 <tr>
-                    <th>Product</th>
-                    <th>Date Order</th>
-                    <th>Status</th>
-                    <th>Update</th>
-                    <th>Remove</th>
+                    <td>Product</td>
+                    <td>Date Order</td>
+                    <td>Status</td>
+                    <td>Update</td>
+                    <td>Remove</td>
                 </tr>
+
+                {% for order in orders %}
+                    <tr>
+                        <td>{{ order.product }}</td>
+                        <td>{{ order.date_created }}</td>
+                        <td>{{ order.status }}</td>
+                        <td><a href="">Update</a></td>
+                        <td><a href="">Delete</a></td>
+                    </tr>
+                {% endfor %}
             </table>
         </div>
     </div>

@@ -108,7 +108,7 @@ nav {
 
 table {
   width: 100%;
-  border-collapse: collapse;
+  margin-left: 10px;
 }
 
 .col7 {
@@ -153,6 +153,12 @@ table {
 
 .header h5 {
   text-align: center;
+}
+
+.card-body h3 {
+  text-align: center;
+  font-size: 23px;
+  margin-top: 10px;
 }
 
 .product-h {
