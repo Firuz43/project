@@ -9,25 +9,35 @@
     </div>
     <div class="customer-contact">
         <h4>Contact information</h4>
-        <p>Email:</p>
-        <p>Phone:</p>
+        <p>Email: {{ customer.email }}</p>
+        <p>Phone: {{ customer.phone }}</p>
     </div>
     <div class="customer-total">
         <h4>Total Orders</h4>
-        <h1></h1>
+        <h1 style="text-align: center; margin-top: 5px;">{{ order_count }}</h1>
     </div>
 </div>
 <div class="row-customer">
     <div class="table-customer">
         <table>
             <tr>
-                <th>Product</th>
-                <th>Category</th>
-                <th>Date order</th>
-                <th>Status</th>
-                <th>Update</th>
-                <th>Remove</th>
+                <td><b>Product</b></td>
+                <td>Category</td>
+                <td>Date order</td>
+                <td>Status</td>
+                <td>Update</td>
+                <td>Remove</td>
             </tr>
+            {% for order in orders %}
+            <tr>
+                <td>{{ order.product }}</td>
+                <td>{{ order.product.category }}</td>
+                <td>{{ order.date_created }}</td>
+                <td>{{ order.status }}</td>
+                <td><a href="#">Uptade</a></td>
+                <td><a href="#">Remove</a></td>
+            </tr>
+            {% endfor %}
         </table>
     </div>
 </div>  
