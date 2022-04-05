@@ -172,6 +172,10 @@ table {
 }
 
 .products-table td {
+  text-align: center;
+}
+
+.products-table td {
   border: 1px solid black;
 }
 
