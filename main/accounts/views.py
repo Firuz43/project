@@ -34,3 +34,10 @@ def customer(request, pk):
 def products(request):
     products = Product.objects.all()
     return render(request, 'accounts/products.html', {'products': products})
+
+
+def createOrder(request):
+
+    context = {}
+
+    return render(request, 'accounts/order_form.html', context)
