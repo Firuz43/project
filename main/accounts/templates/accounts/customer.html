@@ -4,8 +4,8 @@
 <div class="customer-main">
     <div class="customer">
         <h4>Customer:</h4>
-        <button>Update Customer</button>
-        <button>Delete Customer</button>
+        <a href="">Update Customer</a>
+        <a href="{% url 'create_order' customer.id %}">Place order</a>
     </div>
     <div class="customer-contact">
         <h4>Contact information</h4>
